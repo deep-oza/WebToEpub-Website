@@ -335,7 +335,7 @@ class WebToEpubApp {
             
             window.userPreferences.readFromUI();
             
-            const delay = parseInt(document.getElementById('manualDelayPerChapter')?.value) || 2000;
+            const delay = parseInt(document.getElementById('manualDelayPerChapter')?.value) || 500;
             const maxChapters = parseInt(document.getElementById('maxChaptersPerEpub')?.value) || 1000;
             
             if (this.selectedChapters.length > maxChapters) {
