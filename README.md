@@ -131,22 +131,25 @@ Content-Type: application/json
 npm run dev  # Uses nodemon for auto-restart
 ```
 
-### Production Deployment
+### Vercel Deployment (Recommended)
 ```bash
-# Using PM2
-npm install -g pm2
-pm2 start server.js --name webtoepub-website
+# One-click deploy
+npx vercel --prod
 
-# Using Docker
-docker build -t webtoepub-website .
-docker run -p 3000:3000 webtoepub-website
+# Or connect GitHub repository to Vercel
 ```
 
-### Environment Variables
+### Alternative Deployments
 ```bash
-PORT=3000                 # Server port
-NODE_ENV=production      # Environment mode
-RATE_LIMIT_MS=2000       # Request delay
+# Railway
+railway deploy
+
+# Render
+# Connect GitHub repository
+
+# Heroku
+heroku create your-app-name
+git push heroku main
 ```
 
 ## 🛠️ Development
