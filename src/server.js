@@ -13,6 +13,11 @@ app.use(express.static('public'));
 app.use('/assets', express.static('assets'));
 app.use('/src', express.static('src'));
 
+// Serve index.html for root path
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+});
+
 // Rate limiting
 const rateLimit = new Map();
 const RATE_LIMIT_MS = 2000;
