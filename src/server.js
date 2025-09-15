@@ -9,9 +9,11 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
-app.use(express.static('public'));
-app.use('/assets', express.static('assets'));
-app.use('/src', express.static('src'));
+
+// Serve static files from public directory
+app.use(express.static(path.join(__dirname, '../public')));
+app.use('/assets', express.static(path.join(__dirname, '../assets')));
+app.use('/src', express.static(path.join(__dirname, '../src')));
 
 // Serve index.html for root path
 app.get('/', (req, res) => {
