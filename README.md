@@ -54,6 +54,13 @@ WebToEpub-Website/
 - Modern web browser
 
 ### Installation & Launch
+
+This project now contains two applications:
+1.  **Original Application**: A vanilla JS frontend with a Node.js backend.
+2.  **React Application**: A new React frontend that uses the same Node.js backend.
+
+#### Running the Original Application
+
 ```bash
 # Clone or download this project
 cd WebToEpub-Website
@@ -67,6 +74,31 @@ npm start
 ```
 
 Open http://localhost:3000 in your browser.
+
+#### Running the React Application
+
+This requires running the backend server and the React development server in two separate terminals.
+
+**Terminal 1: Start the Backend Server**
+```bash
+# In the root directory of the project
+npm install
+npm start
+```
+
+**Terminal 2: Start the React App**
+```bash
+# In a new terminal, navigate to the webreact directory
+cd webreact
+
+# Install dependencies
+npm install
+
+# Start the React development server
+npm start
+```
+
+Open http://localhost:3001 (or the address provided by the React server) in your browser.
 
 ### Usage
 1. **Enter Story URL**: Any supported website (Royal Road, AO3, etc.)
